@@ -14,12 +14,11 @@
                         <thead>
                         <tr>
                             <th>Invoice #</th>
-                            <th>Customer Name</th>
-                            <th>Customer Address</th>
-                            <th>Dr. Name</th>
-                            <th>Dr. Address</th>
-                            <th>Medicine's List</th>
-                            <th>Total</th>
+                            <th>Product Names</th>
+                            <th>Quantity</th>
+                            <th>Total Price</th>
+                            <th>Employee</th>
+
 
 
                         </tr>
@@ -27,10 +26,6 @@
                         <tbody>
                         <tr class="">
                             <td>1</td>
-                            <td>Customer 1</td>
-                            <td>Dahanu Road</td>
-                            <td>Dr1</td>
-                            <td>Dahanu Road</td>
                             <td>
                                 <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal6">
                                     View
@@ -48,40 +43,21 @@
                                                         <table class="table invoice-table">
                                                             <thead>
                                                             <tr>
-                                                                <th>Item List</th>
-                                                                <th>Quantity</th>
-                                                                <th>Mfg. Name</th>
-                                                                <th>Batch Number</th>
-                                                                <th>Exp. date</th>
-
+                                                                <th>Item Name</th>
                                                                 <th>Price</th>
+
                                                             </tr>
                                                             </thead>
                                                             <tbody>
                                                             <tr>
-                                                                <td><div><strong>Crocine</strong></div>
-                                                                <td>1</td>
+
+
                                                                 <td>ABC</td>
-                                                                <td>26b00</td>
-                                                                <td>10/3/14</td>
-                                                                <td>10</td>
+                                                                <td>2000</td>
+
+
                                                             </tr>
-                                                            <tr>
-                                                                <td><div><strong>D-Cold</strong></div>
-                                                                <td>2</td>
-                                                                <td>PQR</td>
-                                                                <td>38b00</td>
-                                                                <td>10/3/14</td>
-                                                                <td>20</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><div><strong>Cought Syrup</strong></div>
-                                                                <td>1</td>
-                                                                <td>ABC</td>
-                                                                <td>26b00</td>
-                                                                <td>10/3/14</td>
-                                                                <td>40</td>
-                                                            </tr>
+
 
                                                             </tbody>
                                                         </table>
@@ -93,17 +69,18 @@
                                     </div>
                                 </div>
                             </td>
-                            <td>300</td>
+                            <td>10</td>
+                            <td>3000</td>
+                            <td>Ashok</td>
+
                         </tr>
                         <tfoot>
                         <tr>
                             <th>Invoice #</th>
-                            <th>Customer Name</th>
-                            <th>Customer Address</th>
-                            <th>Dr. Name</th>
-                            <th>Dr. Address</th>
-                            <th>Medicine's List</th>
-                            <th>Total</th>
+                            <th>Product Names</th>
+                            <th>Quantity</th>
+                            <th>Total Price</th>
+                            <th>Employee</th>
                         </tr>
                         </tfoot>
                     </table>

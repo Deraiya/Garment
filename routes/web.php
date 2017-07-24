@@ -21,5 +21,22 @@ Route::get('/billing', function () {
     return view('pages.billing');
 });
 
+Route::get('/edit', function () {
+    return view('pages.edit');
+});
+
+Route::get('/emp', function () {
+    return view('pages.emp');
+});
+
+Route::get('/emp/details', function () {
+    return view('pages.empDetails');
+});
+
+
+Route::get('/inv', function () {
+    return view('pages.invList');
+});
+
 
 

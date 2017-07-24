@@ -11,7 +11,12 @@
         <ul class="nav navbar-nav">
 
             <li>
-                <a href="{{ url('/dashboard') }}"> <b style="color: #000000">Dashboard</b>
+                <a href="{{ url('/dashboard') }}" "> <b style="color: #000000">Dashboard</b>
+
+                </a>
+            </li>
+            <li>
+                <a href="{{ url('/inv') }}"> <b style="color: #000000">Inventory List</b>
 
                 </a>
             </li>
@@ -21,12 +26,18 @@
                 </a>
             </li>
             <li>
-                <a href="{{url('/entry')}}"><b style="color: #000000">Product Entry</b>
+                <a href="{{url('/entry')}}"><b style="color: #000000">Entry</b>
 
                 </a>
             </li>
             <li>
                 <a href="{{url('/history')}}"><b style="color: #000000">History</b>
+
+                </a>
+            </li>
+
+            <li>
+                <a href="{{url('/emp')}}"><b style="color: #000000">Employees</b>
 
                 </a>
             </li>
