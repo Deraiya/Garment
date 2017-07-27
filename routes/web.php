@@ -3,40 +3,28 @@
 Route::get('/', function () {
     return view('pages.login');
 });
+Route::get('Dashbord','DashboardController@getDashboard')->name('Dashboard');
+
+Route::get('Billing','BillingController@getBilling')->name('Billing');
+
+Route::get('ProductEntry','ProductEntryController@getProductEntry')->name('ProductEntry');
+Route::post('postProductEntry','ProductEntryController@postProductEntry')->name('postProductEntry');
+Route::post('updated','ProductEntryController@updateProduct')->name('updateProduct');
+Route::get('delete/product/{id}','InventoryController@productdestroy')->name('productdestroy');
 
 
-Route::get('/entry', function () {
-    return view('pages.entry');
-});
+Route::get('Employee','EmployeeController@getEmployee')->name('Employee');
+Route::get('EmployeeDetails','EmployeeController@getEmployeeDetails')->name('EmployeeDetails');
 
-Route::get('/dashboard', function () {
-    return view('pages.dashboard');
-});
+Route::get('History','HistoryController@getHistory')->name('History');
 
-Route::get('/history', function () {
-    return view('pages.history');
-});
+Route::get('Inventory','InventoryController@getInventoryList')->name('Inventory');
+Route::get('/edit/{id}','InventoryController@editProduct')->name('editProduct');
 
-Route::get('/billing', function () {
-    return view('pages.billing');
-});
-
-Route::get('/edit', function () {
-    return view('pages.edit');
-});
-
-Route::get('/emp', function () {
-    return view('pages.emp');
-});
-
-Route::get('/emp/details', function () {
-    return view('pages.empDetails');
-});
-
-
-Route::get('/inv', function () {
-    return view('pages.invList');
-});
+Route::get('/id={id}','BillingController@findProduct');
 
 
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

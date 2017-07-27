@@ -38,32 +38,33 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr class="">
-                                            <td>2</td>
-                                            <td>ABC</td>
-                                            <td>QWE</td>
-                                            <td>Men</td>
-                                            <td>6</td>
-                                            <td>1000</td>
-                                            <td>1300</td>
-                                            <td>T2Q</td>
-                                            <td>AEW</td>
-                                            <td>10/11/17</td>
-                                            <td>Shivam</td>
-                                            <td>17946</td>
+                                        @foreach ($products as $product)
+                                            <tr>
+                                            <td>{{ $product->uid}}</td>
+                                            <td>{{$product->product_name}}</td>
+                                            <td>{{$product->product_company}}</td>
+                                            <td>{{$product->category}}</td>
+                                            <td>{{$product->quantity}}</td>
+                                            <td>{{$product->cp}}</td>
+                                            <td>{{$product->sp}}</td>
+                                            <td>{{$product->dealer_code}}</td>
+                                            <td>{{$product->sanskruti_code}}</td>
+                                            <td>{{$product->distributor}}</td>
+                                            <td>{{$product->date_arr}}</td>
+                                            <td>{{$product->batch}}</td>
                                             <td><button type="button" class="btn btn-info btn-xs">Print</button></td>
                                             <td>
-                                                <a href="{{url('/edit')}}">
+                                                <a href="{{url("edit/$product->uid")}}">
                                                     <button type="button" class="btn btn-primary btn-xs">
                                                         Edit
                                                     </button>
                                                 </a>
 
                                             </td>
-                                            <td><button type="button" class="btn btn-danger btn-xs">Delete</button></td>
+                                            <td><a href="{{url("delete/product/$product->uid") }}"><button type="button" class="btn btn-danger btn-xs">Delete</button></a> </td>
                                         </tr>
 
-
+                                        @endforeach
                                         </tbody>
                                         <tfoot>
                                         <tr>
