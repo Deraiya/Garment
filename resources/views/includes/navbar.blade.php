@@ -6,38 +6,38 @@
             <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
                 <i class="fa fa-reorder"></i>
             </button>
-            <a href="{{url('/dashboard')}}" class="navbar-brand" >SANSKRUTI</a>
+            <a href="{{route('Dashboard')}}" class="navbar-brand" >SANSKRUTI</a>
         </div>
         <ul class="nav navbar-nav">
 
             <li>
-                <a href="{{ url('/dashboard') }}" "> <b style="color: #000000">Dashboard</b>
+                <a href="{{ route('Dashboard') }}" > <b style="color: #000000">Dashboard</b>
 
                 </a>
             </li>
             <li>
-                <a href="{{ url('/inv') }}"> <b style="color: #000000">Inventory List</b>
+                <a href="{{ route('Inventory') }}"> <b style="color: #000000">Inventory List</b>
 
                 </a>
             </li>
             <li>
-                <a href="{{url('/billing')}}"> <b style="color: #000000">Billing</b>
+                <a href="{{ route('Billing') }}"> <b style="color: #000000">Billing</b>
 
                 </a>
             </li>
             <li>
-                <a href="{{url('/entry')}}"><b style="color: #000000">Entry</b>
+                <a href="{{ route('ProductEntry') }}"><b style="color: #000000">Entry</b>
 
                 </a>
             </li>
             <li>
-                <a href="{{url('/history')}}"><b style="color: #000000">History</b>
+                <a href="{{ route('History') }}"><b style="color: #000000">History</b>
 
                 </a>
             </li>
 
             <li>
-                <a href="{{url('/emp')}}"><b style="color: #000000">Employees</b>
+                <a href="{{ route('Employee') }}"><b style="color: #000000">Employees</b>
 
                 </a>
             </li>

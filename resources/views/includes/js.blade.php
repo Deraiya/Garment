@@ -6,16 +6,11 @@
 <script src="{{asset('js/plugins/slimscroll/jquery.slimscroll.min.js')}}"></script>
 
 <!-- Custom and plugin javascript -->
-<script src="{{asset('js/inspinia.js')}}"></script>
-<script src="{{asset('js/plugins/pace/pace.min.js')}}"></script>
 
 <!-- Flot -->
 <script src="{{asset('js/plugins/flot/jquery.flot.js')}}"></script>
 <script src="{{asset('js/plugins/flot/jquery.flot.tooltip.min.js')}}"></script>
 <script src="{{asset('js/plugins/flot/jquery.flot.resize.js')}}"></script>
-
-<!-- ChartJS-->
-<script src="{{asset('s/plugins/chartJs/Chart.min.js')}}j"></script>
 
 <!-- Peity -->
 <script src="{{asset('js/plugins/peity/jquery.peity.min.js')}}"></script>
