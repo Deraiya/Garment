@@ -17,13 +17,6 @@
                             <input type="text" id="barcodescan">
                         </div>
 
-                        <!--<select data-placeholder="Choose a Country..." class="chosen-select" style="width: 300px;" tabindex="2">-->
-                        <!--<option value="">Select</option>-->
-                        <!--<option value="United States">United States</option>-->
-                        <!--<option value="United Kingdom">United Kingdom</option>-->
-
-                        <!--</select> &nbsp; <button type="button" class="btn btn-danger btn-xs">Remove</button>-->
-
                     </div>
                 </div>
 
@@ -43,9 +36,9 @@
             $('#barcodescan').focus();
         });
         $(function () {
-            $(document).on("keypress",function(e){
-                if(e.keyCode == 13){
-
+            $(document).on("keydown",function(e){
+                if(e.keyCode == 9){
+                    e.preventDefault();
                     var x = $('#barcodescan').val();
                     $.ajax({
                         url: 'id='+x,

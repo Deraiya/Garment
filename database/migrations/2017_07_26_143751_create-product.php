@@ -14,7 +14,7 @@ class CreateProduct extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->string('uid')->primary()->unique();
+            $table->string('id')->primary()->unique();
             $table->string('product_name')->nullable();
             $table->string('product_company')->nullable();
             $table->string('category')->nullable();

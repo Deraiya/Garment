@@ -31,7 +31,7 @@ class ProductEntryController extends Controller
 
         $date_arr = Carbon::createFromFormat('d/m/Y', $request['date_arr'])->format('Y-m-d');
         $products = new Product([
-            'uid' => $request->input('uid'),
+            'id' => $request->input('uid'),
             'product_name' => $request->input('product_name'),
             'product_company' => $request->input('product_company'),
             'category' => $request->input('category'),
@@ -51,7 +51,7 @@ class ProductEntryController extends Controller
     public function updateproduct(Request $request)
     {
         $date_arr = Carbon::createFromFormat('d/m/Y', $request['date_arr'])->format('Y-m-d');
-        Product::where('uid', $request->input('uid'))
+        Product::where('id', $request->input('uid'))
             ->update([
 
                 'product_name' => $request->input('product_name'),

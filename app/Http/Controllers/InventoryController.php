@@ -26,8 +26,8 @@ class InventoryController extends Controller
 
     public function editProduct(Request $request, $id)
     {
-        $result = Product::where('uid', $id)->get();
-        return view('pages.edit', compact('result','uid'));
+        $result = Product::where('id', $id)->get();
+        return view('pages.edit', compact('result','id'));
     }
 
     /**
@@ -50,7 +50,10 @@ class InventoryController extends Controller
      */
     public function productdestroy($id)
     {
-        $delete = Product::where('uid', $id)->delete();
+        $delete = Product::where('id', $id)->first();
+
+        $delete->flag = 0;
+        $delete->save();
         return redirect()->back();
     }
 }

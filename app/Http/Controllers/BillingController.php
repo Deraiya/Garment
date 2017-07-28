@@ -13,6 +13,9 @@ class BillingController extends Controller
 
     public function findProduct(Request $request,$id){
         $product = Product::where('uid',$id)->first();
-        return $product->product_name;
+        $productArray[0]= $product->product_name;
+        $productArray[1]= $product->category;
+        $productArray[2]= $product->sp;
+        return $productArray;
     }
 }
