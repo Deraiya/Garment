@@ -2,49 +2,68 @@
 
 @section('content')
     <div class="ibox-content m-b-sm border-bottom">
-        <div class="row">
+
             <div class="ibox-title" style="border: none">
                 <h2>  Add Employees</h2>
                 <hr>
             </div>
 
 
-
-
+            <form action="{{route('postEmployee')}}" method="post">
+{{csrf_field()}}
             <div class="col-lg-2">
                 <div class="form-group">
                     <label class="control-label" for="product_name">First Name</label>
-                    <input type="text" id="" name="" value="" placeholder=" "  autofocus class="form-control">
+                    <input type="text" id="" name="first_name" value="" placeholder=" "  autofocus class="form-control">
                 </div>
             </div>
             <div class="col-lg-2">
                 <div class="form-group">
                     <label class="control-label" for="price">Last Name</label>
-                    <input type="text" id="" name="" value="" placeholder="" class="form-control">
+                    <input type="text" id="" name="last_name" value="" placeholder="" class="form-control">
                 </div>
             </div>
 
 
-            <div class="col-lg-1">
+            <div class="col-lg-2">
                 <div class="form-group">
-                    <label class="control-label" for="quantity">Other</label>
-                    <input type="text" id="" name="" value="" placeholder="" class="form-control">
+                    <label class="control-label" for="quantity">Address</label>
+                    <input type="text" id="" name="address" value="" placeholder="" class="form-control">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <label class="control-label" for="quantity">Phone No</label>
+                    <input type="text" id="" name="phone_no" value="" placeholder="" class="form-control">
+                </div>
+            </div>
+                <div class="col-lg-2">
+                    <div class="form-group">
+                        <label class="control-label" for="quantity">Date Of Birth</label>
+                        <div>
+                            <input type="text" class="form-control" name="dob" value="" data-mask="99/99/9999" placeholder="">
+                        </div>
+                    </div>
+                </div>
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <label class="control-label" for="quantity">Discription</label>
+                    <input type="text" id="" name="discription" value="" placeholder="" class="form-control">
                 </div>
             </div>
 
             <div class="col-lg-12">
                 <div class="form-group">
 
-                    <button type="button" class="btn btn-danger ">Submit</button>
+                    <button type="submit" class="btn btn-danger ">Submit</button>
                 </div>
             </div>
 
+        </form>
 
 
-
-        </div>
         <hr class="hr-line-solid">
-    </div>
+
 <div class="row">
     <div class="col-lg-12">
         <div class="ibox float-e-margins" >
