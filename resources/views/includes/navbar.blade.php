@@ -41,6 +41,11 @@
 
                 </a>
             </li>
+            <li>
+                <a href="{{ route('sales') }}"><b style="color: #000000">Sales</b>
+
+                </a>
+            </li>
 
         </ul>
         <ul class="nav navbar-top-links navbar-right">
