@@ -28,7 +28,7 @@
 
                                         <label>Employee Name *</label>
                                         <div>
-                                            <select data-placeholder="Employee" name="employee_name" class="chosen-select"  tabindex="2">
+                                            <select data-placeholder="Employee" name="employee_id" class="chosen-select"  tabindex="2">
                                                 <option value="">Select</option>
                                                 @foreach($employee as $emp)
                                                 <option value={{$emp->id}}>{{$emp->first_name}}</option>
@@ -84,9 +84,6 @@
 
                                     </div>
 
-                                    <div class="form-group">
-                                        <button class="btn btn-sm btn-info" onclick="prepareForm()" id="btnGet" type="submit" >Print Invoice</button>
-                                    </div>
                                     <div class="col-lg-8 m-r-none" >
                                         <div class="pull-left ">
                                             <h1 class="pull-left">

@@ -17,7 +17,7 @@ Route::get('Employee','EmployeeController@getEmployee')->name('Employee');
 Route::post('postEmployee','EmployeeController@postEmployee')->name('postEmployee');
 Route::get('/edit/employee/{id}','EmployeeController@editEmployee')->name('editEmployee');
 Route::post('updateEmployee/{id}','EmployeeController@updateEmployee')->name('updateEmployee');
-Route::get('EmployeeDetails','EmployeeController@getEmployeeDetails')->name('EmployeeDetails');
+Route::get('EmployeeDetails/{id}','EmployeeController@getEmployeeDetails')->name('EmployeeDetails');
 
 Route::get('Sales','SalesController@getSales')->name('sales');
 

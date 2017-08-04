@@ -49,24 +49,35 @@ class BillingController extends Controller
         foreach ($products as $product){
             $sold = new SoldProducts();
             $sold->invoice = $bill_no;
+            $sold->employee_id = $request['employee_id'];
             $sold->product_name = $product->product_name;
             $sold->sprice = $product->sp;
             $sold->profit = $product->sp - $product->cp;
+            $sold->dos = Carbon::today()->toDateString();
             $totalprofit = $totalprofit + $sold->profit;
             $totalprice = $totalprice + $product->sp;
             $sold->save();
         }
         $bill = new Bill();
         $bill->invoice = $bill_no;
-        $bill->employee_name = $request['employee_name'];
+        $employee_name = Employee::where('id',$request['employee_id'])->first()->first_name;
+        $bill->employee_id = $request['employee_id'];
+        $bill->employee_name = $employee_name;
         $bill->customer_name = $request['customer_name'];
         $bill->address = $request['address'];
         $bill->profit = $totalprofit;
         $bill->totalprice = $totalprice;
         $bill->billdate = Carbon::today()->toDateString();
         $bill->save();
+
+        $this ->updateEmployeeSale($bill->employee_id,count($products));
         return $totalprice;
+    }
 
-
+    function updateEmployeeSale($id,$products_number)
+    {
+        $employee = Employee::where('id',$id)->first();
+        $employee->totalsales+=$products_number;
+        $employee->save();
     }
 }

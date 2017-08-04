@@ -22,6 +22,7 @@ class CreateEmployee extends Migration
             $table->date('dob')->nullable();
             $table->string('discription')->nullable();
             $table->string('extra')->nullable();
+            $table->integer('totalsales')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });

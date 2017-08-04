@@ -15,10 +15,12 @@ class CreateSoldProductsTable extends Migration
     {
         Schema::create('sold_products', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('employee_id');
             $table->string('invoice');
             $table->string('product_name');
             $table->integer('sprice');
             $table->integer('profit');
+            $table->date('dos');
             $table->timestamps();
         });
     }

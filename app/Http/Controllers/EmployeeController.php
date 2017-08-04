@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Bill;
+use App\SoldProducts;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
@@ -30,7 +32,12 @@ class EmployeeController extends Controller
             'dob' => $dob,
             'discription' => $request->input('discription'),
         ]);
-
+        $bills = Bill::where('employee_id',$id)->get();
+        foreach ($bills as $bill)
+        {
+            $bill->employee_name = $request['first_name'];
+            $bill->save();
+        }
         return redirect()->route('Employee');
     }
     public function postEmployee(Request $request)
@@ -60,7 +67,9 @@ class EmployeeController extends Controller
         $employees->save();
         return redirect()->back();
     }
-    public function getEmployeeDetails(){
-        return view('pages.empDetails');
+    public function getEmployeeDetails(Request $request,$id){
+        $products = SoldProducts::where('employee_id',$id)->get();
+        //dd($products);
+        return view('pages.empDetails',compact('products'));
     }
 }

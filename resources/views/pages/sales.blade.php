@@ -32,13 +32,14 @@
                                                 </tr>
                                                 </thead>
                                                 <tbody>
+                                                @foreach($employees as $employee)
                                                 <tr class="">
-                                                    <td>2</td>
-                                                    <td>Ashoksingh</td>
-                                                    <td>Rajpurohit</td>
-                                                    <td>20</td>
+                                                    <td>{{$employee->id}}</td>
+                                                    <td>{{$employee->first_name}}</td>
+                                                    <td>{{$employee->last_name}}</td>
+                                                    <td>{{$employee->totalsales}}</td>
                                                     <td>
-                                                        <a href="{{route('EmployeeDetails')}}">
+                                                        <a href="{{url('EmployeeDetails/'.$employee->id)}}">
                                                             <button type="button" class="btn btn-primary btn-xs">
                                                                 Details
                                                             </button>
@@ -48,6 +49,7 @@
                                                     <td><button type="button" class="btn btn-danger btn-xs">Delete</button></td>
 
                                                 </tr>
+                                                    @endforeach
 
 
                                                 </tbody>

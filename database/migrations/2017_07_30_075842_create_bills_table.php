@@ -17,6 +17,7 @@ class CreateBillsTable extends Migration
             $table->increments('id');
             $table->string('invoice')->unique();
             $table->string('employee_name');
+            $table->integer('employee_id');
             $table->string('customer_name')->nullable();
             $table->bigInteger('phone_no')->nullable();
             $table->text('address')->nullable();
