@@ -7,7 +7,7 @@
 
                 <div class="m-b-md">
                     <i class="fa fa-line-chart fa-4x"></i>
-                    <h1 class="m-xs">3000</h1>
+                    <h1 class="m-xs">{{$todaySales}}</h1>
                     <h3 class="font-bold no-margins">
                         Today's Sale
                     </h3>
@@ -18,7 +18,7 @@
             <div class="widget yellow-bg p-lg text-center">
                 <div class="m-b-md">
                     <i class="fa fa-database fa-4x"></i>
-                    <h1 class="m-xs">7</h1>
+                    <h1 class="m-xs">{{$garmentCount}}</h1>
                     <h3 class="font-bold no-margins">
                         Total Garment
                     </h3>

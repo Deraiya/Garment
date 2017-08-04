@@ -18,24 +18,22 @@
                             <th>Quantity</th>
                             <th>Total Price</th>
                             <th>Employee</th>
-
-
-
                         </tr>
                         </thead>
                         <tbody>
-                        <tr class="">
-                            <td>1</td>
+                        @for($i=0;$i<count($historylist);$i++)
+                            <tr class="">
+                            <td>{{$historylist[$i]->invoice}}</td>
                             <td>
-                                <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal6">
+                                <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal{{$i}}">
                                     View
                                 </button>
-                                <div class="modal inmodal fade" id="myModal6" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal inmodal fade" id="myModal{{$i}}" tabindex="-1" role="dialog" aria-hidden="true">
                                     <div class="modal-dialog modal-lg">
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-                                                <h4 class="modal-title pull-left">Medicine List</h4>
+                                                <h4 class="modal-title pull-left">Garment List</h4>
                                             </div>
                                             <div class="modal-body">
                                                 <div class="row">
@@ -49,16 +47,12 @@
                                                             </tr>
                                                             </thead>
                                                             <tbody>
+                                                            @foreach($productlist[$i] as $product)
                                                             <tr>
-
-
-                                                                <td>ABC</td>
-                                                                <td>2000</td>
-
-
+                                                                <td>{{$product->product_name}}</td>
+                                                                <td>{{$product->sprice}}</td>
                                                             </tr>
-
-
+                                                                @endforeach
                                                             </tbody>
                                                         </table>
                                                     </div><!-- /table-responsive -->
@@ -69,11 +63,12 @@
                                     </div>
                                 </div>
                             </td>
-                            <td>10</td>
-                            <td>3000</td>
-                            <td>Ashok</td>
+                            <td>{{count($productlist[$i])}}</td>
+                            <td>{{$historylist[$i]->totalprice}}</td>
+                            <td>{{$historylist[$i]->employee_name}}</td>
 
                         </tr>
+                        @endfor
                         <tfoot>
                         <tr>
                             <th>Invoice #</th>

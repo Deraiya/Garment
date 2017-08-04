@@ -9,7 +9,7 @@
                     <div class="col-lg-12">
                         <div class="ibox float-e-margins">
                             <div class="m-b-md">
-                                <h2><b>Ashok's</b> Details</h2>
+                                <h2><b></b> Details</h2>
 
                             </div>
                             <div class="ibox-content">
@@ -22,35 +22,25 @@
                                             <th>Prod Name</th>
                                             <th>Prod Company</th>
                                             <th>Categories</th>
-                                            <th>Quantity</th>
                                             <th>CP</th>
                                             <th>SP</th>
-                                            <th>Dealer's Code</th>
-                                            <th>Sankruti Code</th>
-                                            <th>Date Of Arrival</th>
-                                            <th>Distributor</th>
-                                            <th>Batch #</th>
+                                            <th>Date Of Sale</th>
 
 
                                         </tr>
                                         </thead>
                                         <tbody>
+                                        @foreach($products as $product)
                                         <tr class="">
-                                            <td>2</td>
-                                            <td>ABC</td>
+                                            <td>{{$product->id}}</td>
+                                            <td>{{$product->product_name}}</td>
                                             <td>QWE</td>
                                             <td>Men</td>
-                                            <td>6</td>
-                                            <td>1000</td>
-                                            <td>1300</td>
-                                            <td>T2Q</td>
-                                            <td>AEW</td>
-                                            <td>10/11/17</td>
-                                            <td>Shivam</td>
-                                            <td>17946</td>
-
+                                            <td>{{$product->sprice - $product->profit}}</td>
+                                            <td>{{$product->sprice}}</td>
+                                            <td>{{$product->dos}}</td>
                                         </tr>
-
+                                        @endforeach
 
                                         </tbody>
                                         <tfoot>
@@ -59,14 +49,9 @@
                                             <th>Prod Name</th>
                                             <th>Prod Company</th>
                                             <th>Categories</th>
-                                            <th>Quantity</th>
                                             <th>CP</th>
                                             <th>SP</th>
-                                            <th>Dealer's Code</th>
-                                            <th>Sankruti Code</th>
                                             <th>Date Of Arrival</th>
-                                            <th>Distributor</th>
-                                            <th>Batch #</th>
 
                                         </tr>
                                         </tfoot>
